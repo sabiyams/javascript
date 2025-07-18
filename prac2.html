@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //find the number is positive are neghative
+        let num=-5;
+        let result=num > 0 ? "positive" : "negative";
+        console.log(result);
+        //find the given years are leapyear or not
+        let year1=1900,year2=2000,year3=2023;
+        let a=((year1%4 == 0 && year1%100 != 0) || year1%400==0)? "leap year" : "not leapyear";
+        console.log("given year is leap year:",a);
+        let b=((year2%4 == 0 && year2%100 != 0) || year2%400==0)? "leap year" : "not leapyear";
+        console.log("given year is leap year:",b);
+        let c=((year3%4 == 0 && year3%100 != 0) || year3%400==0)? "leap year" : "not leapyear";
+        console.log("given year is leap year:",c);
+        //find greatest number
+        let A=15;
+        let B=42;
+        let C=21;
+        if(A>B || A>C){
+            console.log(" A is the greatest");
+        }else if(B>C){
+            console.log("B is the greatest");
+        }else{
+            console.log("C is the greatest");
+        }
+        //person eligible vote
+        let age=18;
+        let rel= age>=18 ? "your eligible for vote" : "your are n't eligible for vote";
+        console.log(rel);
+        //check the vowel are not
+        let le1="a";
+        let le2="b";
+        let vowel= (le1 === 'a' || le1 === 'e' || le1 === 'i' || le1 === 'o' || le1 === 'u')? "vowel" : "consonant";
+        console.log(vowel);
+        let consonant= (le2 === 'a' || le2 === 'e' || le2 === 'i' || le2 === 'o' || le2 === 'u')? "vowel" : "consonant";
+        console.log(consonant);
+        //find the grade using marks
+        let marks=parseInt(prompt("enter the marks:"));
+        if(marks>=90){
+            console.log("A");
+        }else if(marks>=80){
+            console.log("B");
+        }else if(marks>=70){
+            console.log("C");
+        }else if(marks>=60){
+            console.log("D");
+        }else{
+            console.log("F");
+        }
+        //traffic light test
+        let color=prompt("enter the color:");
+        if(color==="red"){
+            console.log("stop");
+        }else if(color==="green"){
+            console.log("go");
+        }else if(color==="yellow"){
+            console.log("wait");
+        }else{
+            console.log("invalid");
+        }
+        //check the number is divided by 2,3
+        let number=parseInt(prompt("enter the number:"));
+        if(number%2 == 0 && number%3 == 0){
+            console.log("given number divided by both 2 and 3");
+        }else{
+            console.log("given number not divided by both 2 and 3");
+        }
+        //weekday name using number
+        let day=Number(prompt("enter the day:"));
+        switch(day){
+            case 1:
+                console.log("monday");
+                break;
+            case 2:
+                console.log("tuseday");
+                break;
+            case 3:
+                console.log("wenesday");
+                break;
+            case 4:
+                console.log("thurday");
+                break;
+            case 5:
+                console.log("friday");
+                break;
+            case 6:
+                console.log("saturday");
+                break;
+            default:{
+                console.log("invalid number");
+            }
+        }
+        //simple calculator using switch
+        let num1=Number(prompt("enter the first number:"));
+        let num2=Number(prompt("enter the second number:"));
+        let operator=prompt("enter the operator:");
+        switch(operator){
+            case "+":
+                console.log(`${num1}+${num2}=${num1+num2}`);
+                break;
+            case "-":
+                console.log(`${num1}-${num2}=${num1-num2}`);
+                break;
+            case "*":
+                console.log(`${num1}*${num2}=${num1*num2}`);
+                break;
+            case "/":
+                if(num2!=0){
+                    console.log(`${num1}/${num2}=${num1/num2}`);
+                }else{
+                    console.log("error:division by zero");
+                }
+                break;
+                default:{
+                    console.log("invalid operator");
+                }
+        }
+        //month name with number
+        let month=Number(prompt("enter the month number:"));
+        switch(month){
+            case 1:
+                console.log("junary");
+                break;
+            case 2:
+                console.log("febary");
+                break;
+            case 3:
+                console.log("march");
+                break;
+            case 4:
+                console.log("april");
+                break;
+            case 5:
+                console.log("may");
+                break;
+            case 6:
+                console.log("june");
+                break;
+            case 7:
+                console.log("july");
+                break;
+            case 8:
+                console.log("augest");
+                break;
+            case 9:
+                console.log("octomber");
+                break;
+            case 10:
+                console.log("september");
+                break;
+            case 11:
+                console.log("novmber");
+                break;
+            case 12:
+                console.log("decmber"); 
+                break;
+            default:{
+                console.log("invalid month!");
+            }
+        }
+        //check triangle is valid
+        let angle1=Number(prompt("enter the angle:"));
+        let angle2=Number(prompt("enter the angle:"));
+        let angle3=Number(prompt("enter the angle:"));
+        let total=angle1+angle2+angle3;
+        if(total==180){
+            console.log("valid triangle!");
+        }else{
+            console.log("not valid");
+        }
+        //electricity bill generator
+        let units=Number(prompt("enter the units:"));
+        let bill;
+        if(units>=0 && units<=100){
+            bill=units*1.5;
+        }else if(units>=101 && units<=200){
+            bill=units*2;
+        }else if(units>=201 && units<=300){
+            bill=units*3;
+        }else if(units>300){
+            bill=units*5;
+        }else{
+            console.log("invalid input");
+        }
+        if(bill != undefined){
+            console.log(`your bill is ₹${bill}`);
+        }
+    </script>
+</body>
+</html>

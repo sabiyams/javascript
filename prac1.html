@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //swap 2 number without using third number
+        let a=5;
+        let b=10;
+        a+=a;
+        b=b-5;
+        console.log(a,b);
+        //if even are odd
+        let n=7;
+        if(n%2==0){
+            document.write("even");
+        }else{
+            console.log("odd");
+        }
+        //max of 3 numbers
+        let x=5,y=12,z=7;
+        if( x>y || x>z){
+            console.log("x is max");
+        }else if(y>z){
+            console.log("y is max");
+        }else{
+            console.log("z is max");
+        }
+        //convert celsius to fHRENHEIT
+        let C=30;
+        let F=C*9/5+32;
+        console.log("Fhrenheit:",F);//62
+        //give number is which type
+        let A=10;
+        console.log("type of data:",typeof(A));//
+        //add two numbers from user
+       let num1= prompt("enter the number:");
+        let num2=prompt("enter the number:");
+        //if prompt give strings so we convert the given matter
+        //we convert the one datatype into another datatype using parseint
+        let rel=parseInt(num1)+parseInt(num2);
+        alert(rel);
+        //given number is multipule by 3 and 5
+        let B=15;
+        if(B%3===0 && B%5===0){
+            console.log("yes");
+        }else{
+            console.log("no");
+        }//yes
+        //area of triangle
+        let base=10;
+        let height=20;
+        let formula=0.5*base*height;
+        console.log("area of triangle:",formula);//100
+        //sipmple interset
+        let p=5,t=2,r=10;
+        let formula1=p*t*r/100;
+        console.log("simple interset:",formula1);//1
+        //check 2 number are same and its type also same
+        let m=10;
+        let s=10;
+        console.log(m===s);//true
+        console.log(typeof(m)===typeof(s));//true
+        //covert celsius and fhrenheit
+        let f=14,c=14;
+        let celsius=f-32*9/5;
+        let fhrenheit=c*9/5+32;
+        console.log(celsius);//36
+        console.log(fhrenheit);//57.2
+        //check the leap year are not
+        let year=2004;
+        if(year%4==0 || year%400==0 && year!=100){
+            console.log("it is leap year!");
+        }else{
+            console.log("it;s not a leap year");
+        }
+        // 2
+        //arithematic operates
+        let M=10;
+        let H=20;
+        console.log(M+H);//30
+        console.log(M-H);//-10
+        console.log(M*H);//200
+        console.log(M/H);//2
+    </script>
+</body>
+</html>
